@@ -164,6 +164,7 @@ z-index: 1;
     text-shadow:
         0 0 12px rgba(0, 195, 255, 0.8),
         0 0 30px rgba(180, 0, 255, 0.35);
+        animation: heroGlow 3s ease-in-out infinite alternate;
 }
 
 .hero-text {
@@ -280,6 +281,7 @@ z-index: 1;
     border-radius: 50%;
     margin-right: 10px;
     box-shadow: 0 0 12px #22c55e;
+    animation: statusPulse 2s infinite;
 }
 
 .main-content {
@@ -418,4 +420,83 @@ z-index: 1;
 
 .nav-link.active i {
     color: white;
+}
+
+/* ==========================
+   Page Load Animations
+========================== */
+
+.hero,
+.sidebar {
+    opacity: 0;
+    animation: fadeIn 0.9s ease forwards;
+}
+
+.hero {
+    animation-delay: .5s;
+}
+
+.sidebar {
+    animation-delay: .3s;
+}
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes heroGlow {
+
+    from {
+
+        text-shadow:
+            0 0 10px #00d9ff,
+            0 0 25px #00d9ff,
+            0 0 35px #7c3aed;
+
+    }
+
+    to {
+
+        text-shadow:
+            0 0 18px #00d9ff,
+            0 0 40px #00d9ff,
+            0 0 65px #7c3aed;
+
+    }
+
+}
+
+@keyframes statusPulse {
+
+    0% {
+
+        transform: scale(1);
+        opacity: 1;
+
+    }
+
+    50% {
+
+        transform: scale(1.5);
+        opacity: .6;
+
+    }
+
+    100% {
+
+        transform: scale(1);
+        opacity: 1;
+
+    }
+
 }
