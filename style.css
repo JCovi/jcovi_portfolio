@@ -61,7 +61,7 @@ z-index: 1;
 ========================== */
 
 .sidebar {
-    width: 270px;
+    width: 310px;
     padding: 32px 22px;
     border: 1px solid rgba(0, 195, 255, 0.35);
     border-radius: 18px;
@@ -103,7 +103,7 @@ z-index: 1;
     color: #e5efff;
     border: 1px solid transparent;
     text-align: left;
-    font-size: 0.95rem;
+    font-size: 1.5rem;
     padding: 14px 16px;
     border-radius: 10px;
     cursor: pointer;
@@ -167,8 +167,8 @@ z-index: 1;
 }
 
 .hero-text {
-    max-width: 760px;
-    font-size: 1.08rem;
+    max-width: 1000px;
+    font-size: 1.6rem;
     line-height: 1.8;
     color: #b9c8e8;
     margin-bottom: 38px;
@@ -233,6 +233,7 @@ z-index: 1;
     cursor: pointer;
     transition: 0.3s ease;
     font-family: inherit;
+    font-size: 1.6rem;
 }
 
 .hero-buttons button:first-child {
@@ -321,6 +322,7 @@ z-index: 1;
     background: rgba(0, 0, 0, 0.25);
     color: #e5efff;
     transition: 0.25s ease;
+    font-size: 1.4rem;
 }
 
 .tech-item:hover {
@@ -378,6 +380,7 @@ z-index: 1;
     color: #22c55e;
     line-height: 1.9;
     font-family: "JetBrains Mono", monospace;
+    font-size: 1.25rem;
 }
 
 .cursor {
