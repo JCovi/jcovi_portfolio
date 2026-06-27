@@ -52,6 +52,8 @@ body::after {
     min-height: 100vh;
     padding: 18px;
     gap: 18px;
+    position: relative;
+z-index: 1;
 }
 
 /* ==========================
@@ -63,8 +65,8 @@ body::after {
     padding: 32px 22px;
     border: 1px solid rgba(0, 195, 255, 0.35);
     border-radius: 18px;
-    background: rgba(10, 18, 40, 0.72);
-    backdrop-filter: blur(14px);
+    background: rgba(4, 10, 24, 0.02);
+    backdrop-filter: blur(2px);
     box-shadow: 0 0 35px rgba(0, 195, 255, 0.16);
 }
 
@@ -133,8 +135,8 @@ body::after {
     flex: 1;
     border: 1px solid rgba(0, 195, 255, 0.25);
     border-radius: 18px;
-    background: rgba(4, 10, 24, 0.72);
-    backdrop-filter: blur(12px);
+    background: rgba(4, 10, 24, 0.02);
+    backdrop-filter: blur(2px);
     box-shadow: inset 0 0 40px rgba(0, 195, 255, 0.05);
     padding: 70px 60px;
 }
@@ -181,7 +183,7 @@ body::after {
     height: 330px;
     border-radius: 18px;
     border: 1px dashed rgba(0, 217, 255, 0.55);
-    background: rgba(8, 15, 36, 0.8);
+    background: rgba(8, 15, 36, 0.38);
     box-shadow:
         0 0 25px rgba(0, 195, 255, 0.12),
         inset 0 0 35px rgba(180, 0, 255, 0.08);
@@ -291,7 +293,7 @@ body::after {
     margin-top: 42px;
     border: 1px solid rgba(0, 217, 255, 0.35);
     border-radius: 16px;
-    background: rgba(8, 15, 36, 0.68);
+    background: rgba(8, 15, 36, 0.36);
     box-shadow:
         0 0 24px rgba(0, 217, 255, 0.12),
         inset 0 0 30px rgba(180, 0, 255, 0.06);
@@ -336,7 +338,7 @@ body::after {
     border: 1px solid rgba(0, 217, 255, 0.35);
     border-radius: 16px;
     overflow: hidden;
-    background: rgba(0, 0, 0, 0.42);
+    background: rgba(0, 0, 0, 0.28);
     box-shadow: 0 0 24px rgba(0, 217, 255, 0.14);
     font-family: "JetBrains Mono", monospace;
 }
@@ -390,4 +392,11 @@ body::after {
     51%, 100% {
         opacity: 0;
     }
+}
+
+#particle-canvas {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
 }
