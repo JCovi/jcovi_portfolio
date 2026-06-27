@@ -1,16 +1,14 @@
 const terminalOutput = document.getElementById("terminal-output");
 
 const terminalLines = [
-    "user@jcovi-portfolio:~$ whoami",
+    "user@jcovi-portfolio:~$ Who am i?",
     "Josh Covington",
     "Developer. Problem Solver. Security Minded.",
-    "",
-    "user@jcovi-portfolio:~$ status",
     "Security+ Certified",
     "Active Secret Clearance",
     "Computer Science Student",
     "",
-    "user@jcovi-portfolio:~$ current_focus",
+    "current_focus",
     "Building jcovi.com"
 ];
 
