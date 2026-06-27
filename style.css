@@ -538,3 +538,111 @@ z-index: 1;
     opacity: 1;
     transform: translateY(0);
 }
+
+/* ==========================
+   Responsive Design
+========================== */
+
+@media (max-width: 900px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .page-layout {
+        flex-direction: column;
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 22px 18px;
+    }
+
+    .logo {
+        font-size: 2rem;
+        letter-spacing: 6px;
+        margin-bottom: 10px;
+    }
+
+    .logo::after {
+        font-size: 0.65rem;
+    }
+
+    .sidebar-nav {
+        margin-top: 24px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .nav-link {
+        font-size: 0.85rem;
+        padding: 12px;
+        justify-content: flex-start;
+    }
+
+    .nav-link i {
+        width: 18px;
+    }
+
+    .main-content {
+        width: 100%;
+        padding: 32px 20px;
+    }
+
+    .status-badge {
+        position: static;
+        display: inline-block;
+        margin-bottom: 14px;
+        font-size: 0.7rem;
+    }
+
+    .eyebrow {
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+        line-height: 1.6;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+        line-height: 1.15;
+    }
+
+    .hero-text {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .video-card {
+        width: 100%;
+        height: 230px;
+    }
+
+    .play-button {
+        font-size: 3rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons button {
+        width: 100%;
+    }
+
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tech-item {
+        font-size: 0.85rem;
+    }
+
+    .terminal-body {
+        font-size: 0.8rem;
+        overflow-x: auto;
+    }
+}
