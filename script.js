@@ -11,7 +11,6 @@ const terminalLines = [
     "Security+ Certified",
     "Active Secret Clearance",
     "Computer Science Student",
-    "",
     "user@jcovi-portfolio:~$ current_focus",
     "Building jcovi.com"
 ];
