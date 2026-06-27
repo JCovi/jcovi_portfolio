@@ -1,14 +1,20 @@
+// ===============================
+// Terminal Typing Animation
+// ===============================
+
 const terminalOutput = document.getElementById("terminal-output");
 
 const terminalLines = [
-    "user@jcovi-portfolio:~$ Who am i?",
+    "user@jcovi-portfolio:~$ whoami",
     "Josh Covington",
     "Developer. Problem Solver. Security Minded.",
+    "",
+    "user@jcovi-portfolio:~$ status",
     "Security+ Certified",
     "Active Secret Clearance",
     "Computer Science Student",
     "",
-    "current_focus",
+    "user@jcovi-portfolio:~$ current_focus",
     "Building jcovi.com"
 ];
 
@@ -35,3 +41,46 @@ function typeTerminal() {
 }
 
 typeTerminal();
+
+
+// ===============================
+// Sidebar Navigation
+// ===============================
+
+const navButtons = document.querySelectorAll(".nav-link");
+const toast = document.getElementById("toast");
+
+navButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        navButtons.forEach(btn => {
+            btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        const pageName = button.dataset.page;
+
+        showToast(`🚧 ${pageName} page coming soon...`);
+
+    });
+
+});
+
+
+// ===============================
+// Toast Notification
+// ===============================
+
+function showToast(message) {
+
+    toast.textContent = message;
+
+    toast.classList.add("show");
+
+    setTimeout(() => {
+        toast.classList.remove("show");
+    }, 2000);
+
+}
