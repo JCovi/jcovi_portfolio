@@ -8,8 +8,6 @@ const terminalLines = [
     "user@jcovi-portfolio:~$ whoami",
     "Josh Covington",
     "Developer. Problem Solver. Security Minded.",
-    "",
-    "user@jcovi-portfolio:~$ status",
     "Security+ Certified",
     "Active Secret Clearance",
     "Computer Science Student",
