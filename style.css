@@ -61,7 +61,7 @@ z-index: 1;
 ========================== */
 
 .sidebar {
-    width: 310px;
+    width: 340px;
     padding: 32px 22px;
     border: 1px solid rgba(0, 195, 255, 0.35);
     border-radius: 18px;
@@ -402,4 +402,20 @@ z-index: 1;
     inset: 0;
     z-index: 0;
     pointer-events: none;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-link i {
+    width: 25px;
+    color: #8bdcff;
+    text-shadow: 0 0 10px rgba(0, 217, 255, 0.7);
+}
+
+.nav-link.active i {
+    color: white;
 }
