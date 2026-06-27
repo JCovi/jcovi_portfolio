@@ -1,25 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Character encoding -->
     <meta charset="UTF-8">
-
-    <!-- Responsive design for phones and tablets -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Browser tab title -->
     <title>Josh Covington | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>Hello, World!</h1>
+    <div class="page-layout">
 
-    <!-- JavaScript -->
+        <aside class="sidebar">
+            <div class="logo">JCOVI</div>
+
+            <nav class="sidebar-nav">
+                <button class="nav-link active">Home</button>
+                <button class="nav-link">About Me</button>
+                <button class="nav-link">Coding Projects</button>
+                <button class="nav-link">Cybersecurity</button>
+                <button class="nav-link">Networking</button>
+                <button class="nav-link">Cloud</button>
+                <button class="nav-link">Resume</button>
+                <button class="nav-link">Contact</button>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                SYSTEM STATUS: ONLINE
+            </div>
+
+            <section class="hero">
+                <p class="eyebrow">Full-Stack Developer • Cybersecurity • Networking • Cloud</p>
+
+                <h1>Hi, I'm Josh Covington.</h1>
+
+                <p class="hero-text">
+                    I'm building a portfolio that documents my software projects, technical labs,
+                    and long-term path into full-stack development, cybersecurity, networking, and cloud technology.
+                </p>
+
+                <div class="video-card">
+                    <div class="play-button">▶</div>
+                    <p>Intro video coming soon</p>
+                </div>
+
+                <div class="hero-buttons">
+                    <button>View Projects</button>
+                    <button>Contact Me</button>
+                </div>
+
+                <div class="tech-panel">
+                    <h2>TECH STACK</h2>
+
+                    <div class="tech-grid">
+                        <div class="tech-item">HTML5</div>
+                        <div class="tech-item">CSS3</div>
+                        <div class="tech-item">JavaScript</div>
+                        <div class="tech-item">Node.js</div>
+                        <div class="tech-item">SQL</div>
+                        <div class="tech-item">GitHub</div>
+                    </div>
+                </div>
+
+                <div class="terminal-panel">
+                    <div class="terminal-header">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        TERMINAL
+                    </div>
+
+                    <div class="terminal-body">
+                        <p>user@jcovi-portfolio:~$ whoami</p>
+                        <p>Josh Covington</p>
+                        <p>Developer. Problem Solver. Security Minded.</p>
+                        <p>user@jcovi-portfolio:~$ <span class="cursor">_</span></p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+    </div>
+
     <script src="script.js"></script>
-
 </body>
 </html>
