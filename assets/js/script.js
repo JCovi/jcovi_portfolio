@@ -2,25 +2,54 @@
 // Terminal Typing Animation
 // ===============================
 
+// ===============================
+// Terminal Typing Animation
+// ===============================
+
 const terminalOutput = document.getElementById("terminal-output");
 
-const terminalLines = [
-    "user@jcovi-portfolio:~$ whoami",
-    "Josh Covington",
-    "Developer. Problem Solver. Security Minded.",
-    "Security+ Certified",
-    "Active Secret Clearance",
-    "Computer Science Student",
-    "user@jcovi-portfolio:~$ current_focus",
-    "Building jcovi.com"
+const terminalCommands = [
+    [
+        "user@jcovi:~$ whoami",
+        "Josh Covington",
+        "Full-stack developer | Security+ | CS student"
+    ],
+    [
+        "user@jcovi:~$ ls projects",
+        "Portfolio Website",
+        "Recipe Finder",
+        "Employee Tracker",
+        "Library Search"
+    ],
+    [
+        "user@jcovi:~$ status",
+        "Building jcovi.com",
+        "Learning cybersecurity, networking, and cloud"
+    ],
+    [
+        "user@jcovi:~$ roadmap",
+        "Software Development",
+        "Cybersecurity",
+        "Networking",
+        "Cloud Engineering"
+    ]
 ];
 
+let commandIndex = 0;
 let lineIndex = 0;
 let charIndex = 0;
 
+function clearTerminal() {
+    terminalOutput.innerHTML = "";
+    lineIndex = 0;
+    charIndex = 0;
+}
+
 function typeTerminal() {
-    if (lineIndex < terminalLines.length) {
-        const currentLine = terminalLines[lineIndex];
+    const currentCommand = terminalCommands[commandIndex];
+
+    if (lineIndex < currentCommand.length) {
+        const currentLine = currentCommand[lineIndex];
 
         if (charIndex < currentLine.length) {
             terminalOutput.innerHTML += currentLine.charAt(charIndex);
@@ -30,10 +59,16 @@ function typeTerminal() {
             terminalOutput.innerHTML += "<br>";
             lineIndex++;
             charIndex = 0;
-            setTimeout(typeTerminal, 350);
+            setTimeout(typeTerminal, 400);
         }
     } else {
         terminalOutput.innerHTML += '<span class="cursor">_</span>';
+
+        setTimeout(() => {
+            commandIndex = (commandIndex + 1) % terminalCommands.length;
+            clearTerminal();
+            typeTerminal();
+        }, 2500);
     }
 }
 
