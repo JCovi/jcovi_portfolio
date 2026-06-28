@@ -81,9 +81,11 @@
                     and long-term path into full-stack development, cybersecurity, networking, and cloud technology.
                 </p>
 
-                <div class="video-card">
-                    <div class="play-button">▶</div>
-                    <p>Intro video coming soon</p>
+                <div class="video-card" id="open-video">
+                    <div class="video-overlay">
+                         <div class="play-button">▶</div>
+                        <p>Watch intro</p>
+                     </div>
                 </div>
 
                 <div class="hero-buttons">
@@ -122,6 +124,15 @@
     </div>
 
     <div id="toast"></div>
+
+    <div class="video-modal" id="video-modal">
+        <div class="video-modal-content">
+            <button class="close-video" id="close-video">×</button>
+            <div class="video-placeholder">
+               Intro video coming soon
+            </div>
+        </div>
+    </div>
 
     <script src="assets/js/background.js"></script>
     <script src="assets/js/script.js"></script>

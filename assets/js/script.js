@@ -81,3 +81,25 @@ function showToast(message) {
     }, 2000);
 
 }
+
+// ===============================
+// Video Modal
+// ===============================
+
+const openVideo = document.getElementById("open-video");
+const videoModal = document.getElementById("video-modal");
+const closeVideo = document.getElementById("close-video");
+
+openVideo.addEventListener("click", () => {
+    videoModal.classList.add("show");
+});
+
+closeVideo.addEventListener("click", () => {
+    videoModal.classList.remove("show");
+});
+
+videoModal.addEventListener("click", (event) => {
+    if (event.target === videoModal) {
+        videoModal.classList.remove("show");
+    }
+});
