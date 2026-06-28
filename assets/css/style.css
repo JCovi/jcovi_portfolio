@@ -138,7 +138,7 @@ z-index: 1;
     background: rgba(4, 10, 24, 0.02);
     backdrop-filter: blur(2px);
     box-shadow: inset 0 0 40px rgba(0, 195, 255, 0.05);
-    padding: 15px 60px;
+    padding: 42px 52px;
 }
 
 .hero {
@@ -645,6 +645,14 @@ z-index: 1;
         font-size: 0.8rem;
         overflow-x: auto;
     }
+
+    .hero-grid {
+    grid-template-columns: 1fr;
+    }
+
+    .hero-right .hud-panel {
+        position: static;
+    }
 }
 
 /* ==========================
@@ -716,4 +724,100 @@ z-index: 1;
     align-items: center;
     color: #b9d7ff;
     font-size: 1.2rem;
+}
+
+/* ==========================
+   HUD Dashboard
+========================== */
+
+.hud-panel {
+    margin-top: 28px;
+    max-width: 620px;
+    border: 1px solid rgba(0, 217, 255, 0.4);
+    border-radius: 18px;
+    background: rgba(8, 15, 36, 0.36);
+    box-shadow:
+        0 0 28px rgba(0, 217, 255, 0.16),
+        inset 0 0 30px rgba(180, 0, 255, 0.06);
+    padding: 22px;
+}
+
+.hud-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "JetBrains Mono", monospace;
+    color: #00d9ff;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    margin-bottom: 18px;
+}
+
+.hud-live {
+    color: #22c55e;
+    text-shadow: 0 0 10px #22c55e;
+}
+
+.hud-row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 217, 255, 0.14);
+    padding: 12px 0;
+    color: #b9c8e8;
+}
+
+.hud-row strong {
+    color: white;
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.9rem;
+}
+
+.hud-progress {
+    margin-top: 18px;
+}
+
+.hud-progress-label {
+    display: flex;
+    justify-content: space-between;
+    color: #8bdcff;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+}
+
+.hud-progress-bar {
+    height: 10px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+}
+
+.hud-progress-fill {
+    width: 35%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #00d9ff, #b400ff);
+    box-shadow: 0 0 18px rgba(0, 217, 255, 0.65);
+}
+
+/* ==========================
+   Hero Grid Layout
+========================== */
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.85fr);
+    gap: 32px;
+    align-items: start;
+}
+
+.hero-left,
+.hero-right {
+    min-width: 0;
+}
+
+.hero-right .hud-panel {
+    margin-top: 0;
+    max-width: none;
+    position: sticky;
+    top: 30px;
 }
